@@ -1,0 +1,18 @@
+<web-app>
+  <servlet>
+    <servlet-name>dekho</servlet-name>
+    <servlet-class>ReqDisp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dekho</servlet-name>
+    <url-pattern>/dekhle</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>dekha</servlet-name>
+    <servlet-class>ReqDispCatch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dekha</servlet-name>
+    <url-pattern>/dekhenge</url-pattern>
+  </servlet-mapping>
+</web-app>
