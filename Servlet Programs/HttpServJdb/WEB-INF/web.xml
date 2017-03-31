@@ -1,0 +1,10 @@
+<web-app>
+  <servlet>
+    <servlet-name>firstServlet</servlet-name>
+    <servlet-class>ReqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>firstServlet</servlet-name>
+    <url-pattern>/dekhenge</url-pattern>
+  </servlet-mapping>
+</web-app>

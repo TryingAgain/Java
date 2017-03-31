@@ -1,0 +1,42 @@
+<web-app>
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  </context-param>
+  <context-param>
+    <param-name> image </param-name>
+    <param-value> Fill any value here </param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>contextwaala</servlet-name>
+    <servlet-class>ConfigContextServlet</servlet-class>
+    <init-param>
+      <param-name> User </param-name>
+      <param-value> Sumit </param-value>
+    </init-param>
+    <init-param>
+      <param-name>property</param-name>
+      <param-value>Lulu :p</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>contextwaala</servlet-name>
+    <url-pattern>/dekhle</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>contextwaala1</servlet-name>
+    <servlet-class>ConfigContextServlet1</servlet-class>
+    <init-param>
+      <param-name> User1 </param-name>
+      <param-value> TuBhi </param-value>
+    </init-param>
+    <init-param>
+      <param-name>property1</param-name>
+      <param-value>Lulu :p</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>contextwaala1</servlet-name>
+    <url-pattern>/dekhle1</url-pattern>
+  </servlet-mapping>
+</web-app>
