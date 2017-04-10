@@ -1,0 +1,26 @@
+<web-app>
+  <servlet>
+    <servlet-name>abc</servlet-name>
+    <servlet-class>PDFServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>abc</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>image1</servlet-name>
+    <servlet-class>ImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>image1</servlet-name>
+    <url-pattern>/checkit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>excel1</servlet-name>
+    <servlet-class>ExcelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>excel1</servlet-name>
+    <url-pattern>/done</url-pattern>
+  </servlet-mapping>
+</web-app>
