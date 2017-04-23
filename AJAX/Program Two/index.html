@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function showCustomer(str){
+
+        var xmlhttp;
+
+        if(str==""){
+
+          document.getElementById("txtHint").innerHTML = "Please select something";
+          return;
+        }
+
+        if(window.XMLHttpRequest){
+
+          xmlhttp = new XMLHttpRequest();
+        }
+
+        else{
+
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange = function(){
+
+          if(xmlhttp.readyState== 4 && xmlhttp.status == 200){
+
+            document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+          }
+
+        }
+
+        xmlhttp.open("GET", "Oracle?table=" +str, true);
+        xmlhttp.send();
+      }
+    </script>
+  </head>
+  <body>
+    <form action = "">
+      <select name = "customers" onchange="showCustomer(this.value)">
+        <option value =""> Select table </option>
+        <option value = "artists"> Artists</option>
+        <option value = "students"> Students</option>
+        <option value = "albums"> Albums </option>
+      </select>
+    </form>
+    <br>
+    <div id = "txtHint"> info will be listed here.... </div>
+  </body>
+</html>

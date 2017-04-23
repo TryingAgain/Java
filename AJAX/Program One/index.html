@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script>
+      function loadonXMLDoc(){
+        var xmlhttp;
+        // echo("on click");
+        // document.write("on click")
+
+        if(window.XMLHttpRequest){
+          // Code for IE7, CHrome, Safari, Mozilla, Opera......
+
+          // document.write("on click1");
+          xmlhttp = new XMLHttpRequest();
+          // document.write("on click1");
+        }
+
+        else{
+          //Code for IE6, IE5......
+
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange = function(){
+
+          // echo("after function call");
+          // document.write("after function call")
+          // alert(readystate);
+          // document.write(xmlhttp.status);
+          // document.write(xmlhttp.readyState);
+
+          if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+
+            // document.write("inside change");
+            // document.write(xmlhttp.responseText);
+            document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+          }
+        }
+
+        xmlhttp.open("GET", "demo1?name1=lalu&name2=rabari", true);
+        xmlhttp.send();
+      }
+    </script>
+  </head>
+  <body>
+    <h2> AJAX </h2>
+    <button type ="button" onclick="loadonXMLDoc()"> Request Data</button>
+    <div id = "myDiv"></div>
+  </body>
+</html>
